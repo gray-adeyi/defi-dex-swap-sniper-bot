@@ -1,0 +1,29 @@
+[project]
+name = "defi-dex-swap-sniper-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anchorpy>=0.20.1",
+    "beautifulsoup4>=4.13.3",
+    "pydantic-settings>=2.7.1",
+    "requests>=2.32.3",
+    "selenium>=4.28.1",
+    "solana>=0.35.1",
+    "web3>=7.8.0",
+    "webdriver-manager>=4.0.2",
+]
+
+[project.scripts]
+start-bot = "defi_dex_swap_sniper_bot.trading_bot:run"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.6",
+]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
